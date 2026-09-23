@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #81a0a3;
+    min-height: viewport-height;
+
+}
+
+.parent{
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: table-column;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.child{
+    flex: 1;
+    padding: 20px;
+    background-color: #e8f0fe;
+    border: 2px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.counter{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.clicks {
+    font-size: 1.1em;
+    margin-top: 10px;
+}

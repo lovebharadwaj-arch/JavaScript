@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Desgin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js" defer></script>
+
+     <!---mobile top bar --->
+     <div class="mobile-topbar">
+        <button class="icon-btn" id="menuBtn" arial-lebal="open menu">☰</button>
+          <div class="brand">
+            <span class="brand-mark">✦</span>
+               <span>DataGrow</span>
+          </div>
+            <button class="icon-btn" id="mobileThemeBtn" aria-label="Toggle theme">☼</button>
+     </div>
+
+     <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">✦</span>
+        <span>DataGrow</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#" class="nav-link active" data-page="Dashboard">
+          <span class="nav-icon">▦</span><span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Analytics">
+          <span class="nav-icon">▥</span><span>Analytics</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Performance">
+          <span class="nav-icon">⌁</span><span>Performance</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Conversion List">
+          <span class="nav-icon">▱</span><span>Conversion List</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Alerts">
+          <span class="nav-icon">♧</span><span>Alerts</span>
+        </a>
+        <a href="#" class="nav-link" data-page="AI Assistant">
+          <span class="nav-icon">✣</span><span>AI Assistant</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Settings">
+          <span class="nav-icon">⚙</span><span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="section-label">CHANNELS</div>
+
+      <nav class="channel-nav">
+        <a href="#" class="nav-link" data-page="Instagram">
+          <span class="nav-icon">◎</span><span>Instagram</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Facebook">
+          <span class="nav-icon">f</span><span>Facebook</span>
+        </a>
+        <a href="#" class="nav-link" data-page="Google">
+          <span class="nav-icon">G</span><span>Google</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+
+      <div class="upgrade-card">
+        <div class="upgrade-icon">♛</div>
+        <p>Get detailed analytics<br />for helping you get pro</p>
+        <button id="upgradeBtn">Upgrade Plan</button>
+      </div>
+
+      <a href="#" class="logout" id="logoutBtn">↪ <span>Logout</span></a>
+    </aside>
+
+
+     <!-- Main content -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="topbar">
+        <div class="search-box">
+          <span>⌕</span>
+          <input type="search" id="globalSearch" placeholder="Search" />
+        </div>
+
+        <div class="top-actions">
+          <button class="circle-btn" id="themeBtn" title="Toggle theme">☼</button>
+          <button class="circle-btn" id="notificationBtn" title="Notifications">♧</button>
+          <button class="circle-btn" title="Messages">✉</button>
+          <div class="profile">
+            <div class="avatar">LB</div>
+            <div class="profile-text">
+              <strong>Love Bhardwaj</strong>
+              <small>abc342@gmail.com</small>
+            </div>
+            <span>⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <!-- Page heading -->
+        <section class="page-heading">
+          <div>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="heading-actions">
+            <div class="date-picker">
+              <button id="dateBtn">▣ <span>10 Feb - 21 Nov 2026</span>⌄</button>
+              <div class="date-menu" id="dateMenu">
+                <button>10 Feb - 21 Nov 2026</button>
+                <button>01 Jan - 31 Mar 2026</button>
+                <button>01 Apr - 30 Jun 2026</button>
+              </div>
+            </div>
+            <button class="primary-btn" id="exportBtn">⇩ Export Data</button>
+          </div>
+        </section>
+
+        <!-- Stat cards -->
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Organic Traffic</span><span class="stat-icon">♧</span>
+            </div>
+            <div class="stat-value-row">
+              <strong>82.33%</strong>
+              <span class="change positive">↑ +8.73%</span>
+            </div>
+            <p>Completed to 10 Feb - 31 Dec 2026</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Invalid Traffic</span><span class="stat-icon">◉</span>
+            </div>
+            <div class="stat-value-row">
+              <strong>13.96%</strong>
+              <span class="change negative">↓ -7.32%</span>
+            </div>
+            <p>Completed to 10 Feb - 31 Dec 2026</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Savings</span><span class="stat-icon">▣</span>
+            </div>
+            <div class="stat-value-row">
+              <strong>$45,562</strong>
+              <span class="change positive">↑ +9.72%</span>
+            </div>
+            <p>Completed to 10 Feb - 31 Dec 2026</p>
+          </article>
+        </section>
+
+        <!-- Main analytics row -->
+        <section class="dashboard-grid">
+          <article class="panel analytics-panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Analytics</h2>
+                <div class="mini-stats">
+                  <span>Organic Traffic <strong>12,125</strong> <small>8.7%</small></span>
+                  <span>Invalid Traffic <strong>4,125</strong> <small>4.7%</small></span>
+                </div>
+              </div>
+
+              <div class="chart-actions">
+                <div class="legend">
+                  <span><i class="dot purple"></i>Organic</span>
+                  <span><i class="dot orange"></i>Invalid</span>
+                  <span><i class="dot yellow"></i>Referral</span>
+                </div>
+                <select id="chartPeriod">
+                  <option>Monthly</option>
+                  <option>Weekly</option>
+                  <option>Yearly</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="chart">
+              <div class="y-axis">
+                <span>500k</span><span>300k</span><span>200k</span><span>100k</span><span>0k</span>
+              </div>
+              <div class="chart-area" id="chartArea"></div>
+            </div>
+          </article>
+
+          <article class="panel channels-panel">
+            <div class="panel-heading simple">
+              <h2>Traffic by Top Channels</h2>
+              <button class="more-btn">⋮</button>
+            </div>
+
+            <div class="legend channel-legend">
+              <span><i class="dot purple"></i>Organic</span>
+              <span><i class="dot dark-purple"></i>Referral</span>
+              <span><i class="dot violet"></i>Invalid</span>
+            </div>
+
+            <div class="percentage-row">
+              <strong>48.36%</strong>
+              <strong>32.87%</strong>
+              <strong>28.30%</strong>
+            </div>
+
+            <div class="segment-bar">
+              <span class="seg-active"></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <div class="table-head">
+              <span>Channels</span><span>Percent</span><span>Totals</span>
+            </div>
+
+            <div class="channel-list" id="channelList">
+              <div class="channel-row" data-name="instagram">
+                <span><b class="social instagram">◎</b>Instagram</span><strong>65%</strong><strong>17,143</strong>
+              </div>
+              <div class="channel-row" data-name="facebook">
+                <span><b class="social facebook">f</b>Facebook</span><strong>55%</strong><strong>14,321</strong>
+              </div>
+              <div class="channel-row" data-name="google">
+                <span><b class="social google">G</b>Google</span><strong>43%</strong><strong>11,843</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Bottom row -->
+        <section class="dashboard-grid bottom-grid">
+
+          <article class="panel countries-panel">
+            <div class="panel-heading simple">
+              <h2>Traffic by Top Countries</h2>
+              <div class="small-search">⌕ <input id="countrySearch" placeholder="Search" /></div>
+            </div>
+
+            <div class="tabs" id="countryTabs">
+              <button class="active">All</button>
+              <button>Organic</button>
+              <button>Referral</button>
+              <button>Invalid</button>
+              <button>Direct</button>
+            </div>
+
+            <div class="table-head">
+              <span>Countries</span><span>Percent</span><span>Totals</span>
+            </div>
+
+            <div class="country-list" id="countryList">
+              <div class="country-row" data-name="united states">
+                <span>🇺🇸 United States</span><strong>75%</strong><strong>17,232</strong>
+              </div>
+              <div class="country-row" data-name="india">
+                <span>🇮🇳 India</span><strong>68%</strong><strong>15,827</strong>
+              </div>
+              <div class="country-row" data-name="united kingdom">
+                <span>🇬🇧 United Kingdom</span><strong>57%</strong><strong>12,941</strong>
+              </div>
+              <div class="country-row" data-name="germany">
+                <span>🇩🇪 Germany</span><strong>51%</strong><strong>10,452</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel map-panel">
+            <div class="panel-heading simple">
+              <h2>Countries <small>(124)</small></h2>
+              <button class="more-btn">⋮</button>
+            </div>
+            <div class="world-map" aria-label="Decorative world map">
+              <div class="continent north-america"></div>
+              <div class="continent south-america"></div>
+              <div class="continent europe"></div>
+              <div class="continent asia"></div>
+              <div class="continent africa"></div>
+              <div class="continent australia"></div>
+            </div>
+          </article>
+
+        </section>
+      </div>
+    </main>
+</body>
+</html>

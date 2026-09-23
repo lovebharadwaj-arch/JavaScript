@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    <div class="container">
+        <div class="input-section">
+            <label for="min">Minimum:</label>
+            <input type="number" id="min" placeholder="Enter minimum value">
+            <label for="max">Maximum:</label>
+            <input type="number" id="max" placeholder="Enter maximum value">
+        </div>
+         <button id="generate" onclick="genRandNum()">Generate</button>
+         <div class="result">
+            <p id="randomNumber">Click the button to  generate</p>
+        </div>
+        <button id="reset" onclick="reset()">Reset</button>
+    </div>
+</body>
+</html>
