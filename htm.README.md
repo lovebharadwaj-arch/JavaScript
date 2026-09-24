@@ -2,7 +2,7 @@
 
 > A detailed HTML learning guide covering HTML fundamentals, elements, attributes, forms, tables, multimedia, semantic HTML, accessibility, APIs, and advanced concepts.
 
-**Reference:** [W3Schools HTML Tutorial](https://www.w3schools.com/Html/)
+
 
 ---
 

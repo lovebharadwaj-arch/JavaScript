@@ -2,8 +2,8 @@
 
 > A practical and beginner-friendly guide to the **HTML Document Object Model (DOM)**, its objects, properties, methods, collections, browser APIs, and CSS manipulation using JavaScript.
 
-📚 **Reference:** GeeksforGeeks — HTML DOM Complete Reference
-🔗 https://www.geeksforgeeks.org/html/html-dom-complete-reference/
+📚 **Reference:** documentation — HTML DOM Complete Reference
+
 
 ---
 
@@ -2228,5 +2228,3 @@ The most important idea is:
 ## 📚 Reference
 
 This README is based on the topic structure and reference material from the **GeeksforGeeks HTML DOM Complete Reference**, including its sections on DOM objects, document methods/properties, element APIs, collections, browser objects, and style properties.
-
-**Source:** [GeeksforGeeks — HTML DOM Complete Reference](https://www.geeksforgeeks.org/html/html-dom-complete-reference/?utm_source=chatgpt.com)

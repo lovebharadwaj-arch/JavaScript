@@ -2,7 +2,7 @@
 
 > A structured CSS README based on the W3Schools CSS tutorial, organized from fundamentals to advanced layout, responsive design, and reference topics.
 >
-> Source: https://www.w3schools.com/css/
+
 
 ---
 
@@ -2952,11 +2952,3 @@ Before considering yourself comfortable with CSS, make sure you can explain and 
 
 ---
 
-## Source
-
-This README is a learning-oriented summary and reorganization of the W3Schools CSS tutorial and its listed topic areas.
-
-- W3Schools CSS Tutorial: https://www.w3schools.com/css/
-- CSS Introduction: https://www.w3schools.com/css/css_intro.asp
-
-> This document summarizes the documentation rather than reproducing it verbatim.

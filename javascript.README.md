@@ -1,6 +1,5 @@
 # JavaScript Complete Guide
 
-> A structured JavaScript learning and revision guide based on the [GeeksforGeeks JavaScript Tutorial](https://www.geeksforgeeks.org/javascript/javascript-tutorial/), reorganized into a practical beginner-to-advanced roadmap.
 
 ---
 
