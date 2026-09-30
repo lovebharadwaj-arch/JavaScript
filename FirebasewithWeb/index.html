@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Firebase Connection with Vanilla JavaScript</h1>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li>User</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="auth-container">
+
+            <h2>Firebase Login System</h2>
+
+            <form id="authForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="abc@mail.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Your password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="button" id="signupBtn">
+                    Sign Up
+                </button>
+
+                <button type="button" id="signinBtn">
+                    Sign In
+                </button>
+
+                <button type="button" id="signoutBtn">
+                    Sign Out
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Only authService.js is loaded.
+         authService.js imports config.js -->
+    <script
+        type="module"
+        src="./service/authService.js">
+    </script>
+
+     <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-app.js"></script>
+
+<!-- Firebase Realtime Database -->
+<script src="https://www.gstatic.com/firebasejs/9.6.4/firebase-database.js"></script>
+
+</body>
+</html>

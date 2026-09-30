@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beautiful Sign Up Form</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main class="signup-page">
+        <!-- Registration Card -->
+        <section class="signup-card">
+            <h2>Registration</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Create password">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm password">
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="terms">
+                    <label for="terms"> I accept all terms & conditions
+                    </label>
+                </div>
+
+                <button type="submit" id="signupBtn">Register Now</button>
+
+                <p id="message" class="message"></p>
+
+            </form>
+
+            <p class="login-text">  Already have an account?
+                <a href="../login/index.html">Login now</a>
+            </p>
+
+        </section>
+
+        <!-- Right Side Heading -->
+        <section class="hero-content">
+            <h1>
+                Expense Tracker<br>
+                Sign up Form
+            </h1>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="./script.js"></script>
+
+</body>
+</html>

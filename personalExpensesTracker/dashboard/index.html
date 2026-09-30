@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expense Tracker Dashboard</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+
+    <body>
+
+<!-- =========================
+            NAVBAR
+========================== -->
+
+        <header class="navbar">
+            <div class="navbar-brand">
+                <span class="logo">💰</span>
+
+                <div>
+                    <h1>Expense Tracker</h1>
+                    <span class="brand-subtitle">Manage your money</span>
+                </div>
+            </div>
+
+            <nav class="navbar-menu" aria-label="Main navigation">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Expenses</a>
+                <a href="#">Reports</a>
+                <a href="#">Profile</a>
+            </nav>
+
+            <div class="navbar-actions">
+                <button type="button" class="logout-btn" id="signoutBtn">Logout</button>
+            </div>
+        </header>
+
+<!-- =========================
+         MAIN
+========================== -->
+
+        <main>
+        <!-- =========================
+             DASHBOARD HEADER
+        ========================== -->
+            <section class="dashboard-header">
+                <div>
+                    <p class="page-label">OVERVIEW</p>
+                    <h2>Dashboard</h2>
+                    <p class="page-description">Track your income, expenses and overall balance.</p>
+                </div>
+                <div class="period-filter">
+                    <label for="month"> Period </label>
+                    <select id="month">
+                        <option value="2026-09">September 2026</option>
+                        <option value="2026-08">August 2026</option>
+                        <option value="2026-07">July 2026</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- =========================
+             SUMMARY CARDS
+        ========================== -->
+
+            <section class="summary-cards">
+                <!-- Total Income -->
+
+                <article class="summary-card income-card">
+                    <div class="summary-card-top">
+                        <div class="summary-icon income-icon">↗</div>
+                        <span class="summary-label"> Total Income </span>
+                    </div>
+                    <h3>
+                        <span id="totalIncome"> ₹0 </span>
+                        <button type="button" id="editIncomeBtn" class="income-edit-btn" aria-label="Edit income">Edit</button>
+                        <input type="number" id="incomeInput" style="display:none;margin-left:8px;" />
+                        <button type="button" id="saveIncomeBtn" style="display:none;" class="btn-small">Save</button>
+                        <button type="button" id="cancelIncomeBtn" style="display:none;" class="btn-small">Cancel</button>
+                    </h3>
+
+                    <p class="summary-change positive">Total income</p>
+                </article>
+
+                <!-- Total Expenses -->
+                <article class="summary-card expense-card">
+                    <div class="summary-card-top">
+                        <div class="summary-icon expense-icon">↘</div>
+                        <span class="summary-label"> Total Expenses </span>
+                    </div>
+
+                    <h3> <span id="totalExpenses"> ₹0 </span></h3>
+                    <p class="summary-change negative">Total expenses</p>
+                </article>
+
+                <!-- Balance -->
+
+                <article class="summary-card balance-card">
+                    <div class="summary-card-top">
+                        <div class="summary-icon balance-icon">₹</div>
+                        <span class="summary-label"> Balance </span>
+                    </div>
+                    <h3><span id="remainBalance"> ₹0 </span></h3>
+                    <p class="summary-change">Available balance</p>
+                </article>
+            </section>
+
+        <!-- =========================
+             ANALYTICS + ADD TRANSACTION
+        ========================== -->
+
+            <section class="dashboard-content">
+            <!-- =========================
+                 ANALYTICS CARD
+            ========================== -->
+                <article class="analytics-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>Expense Overview</h2>
+                            <p>Your spending over time</p>
+                        </div>
+                        <select id="chart-period">
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+
+                    <!-- Chart Placeholder -->
+                    <div class="chart-container">
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="bar bar-1">
+                                    <span>₹500</span>
+                                </div>
+                                <div class="bar bar-2">
+                                    <span>₹800</span>
+                                </div>
+                                <div class="bar bar-3">
+                                    <span>₹400</span>
+                                </div>
+                                <div class="bar bar-4">
+                                    <span>₹1000</span>
+                                </div>
+                                <div class="bar bar-5">
+                                    <span>₹700</span>
+                                </div>
+                                <div class="bar bar-6">
+                                    <span>₹900</span>
+                                </div>
+                                <div class="bar bar-7">
+                                    <span>₹600</span>
+                                </div>
+                            </div>
+
+                            <div class="chart-days">
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                                <span>Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- =========================
+                 ADD TRANSACTION CARD
+            ========================== -->
+
+                <article class="add-expense-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>Add Transaction</h2>
+                            <p>Record a new income or expense</p>
+                        </div>
+                    </div>
+
+                    <form class="expense-form" id="expenseForm">
+                        <!-- Title -->
+                        <div class="form-group">
+                            <label for="title"> Title </label>
+                            <input type="text" id="title" name="title" placeholder="e.g. Lunch" required />
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="form-group">
+                            <label for="amount"> Amount </label>
+                            <input  type="number"  id="amount"  name="amount"  placeholder="e.g. 500"  min="0"  step="0.01"  required />
+                        </div>
+
+                        <!-- Transaction Type -->
+
+                        <div class="form-group">
+                            <label for="type"> Transaction Type </label>
+                            <select id="type" name="type" required>
+                                <option value="expense">Expense</option>
+                                <option value="income">Income</option>
+                            </select>
+                        </div>
+
+                        <!-- Category -->
+
+                        <div class="form-group">
+                            <label for="category"> Category </label>
+
+                            <select id="category" name="category" required>
+                                <option value="">Select category</option>
+                                <option value="food">Food</option>
+                                <option value="travel">Travel</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="bills">Bills</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="health">Health</option>
+                                <option value="education">Education</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Date -->
+
+                        <div class="form-group">
+                            <label for="date"> Date </label>
+                            <input type="date" id="date" name="date" required />
+                        </div>
+
+                        <!-- Submit -->
+
+                        <button type="submit" class="add-expense-btn">+ Add Transaction</button>
+                    </form>
+            </section>
+            <!-- =========================
+             RECENT TRANSACTIONS
+        ========================== -->
+
+            <section class="recent-expenses">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <div>
+                        <p class="page-label">TRANSACTIONS</p>
+                        <h2>Recent Transactions</h2>
+                        <p>Your latest transactions</p>
+                    </div>
+
+                    <button type="button" class="view-all-btn" id="viewAllBtn">View All</button>
+                </div>
+
+                <!-- =========================
+                 FILTERS
+            ========================== -->
+                <div class="transaction-filters">
+                    <!-- Search -->
+
+                    <div class="filter-group">
+                        <label for="searchInput"> Search </label>
+                        <input type="search" id="searchInput" placeholder="Search transaction..." />
+                    </div>
+
+                    <!-- Type Filter -->
+                    <div class="filter-group">
+                        <label for="typeFilter"> Type </label>
+                        <select id="typeFilter">
+                            <option value="all">All Types</option>
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+
+                    <!-- Category Filter -->
+                    
+                        <label for="categoryFilter"> Category </label>
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="food">Food</option>
+                            <option value="travel">Travel</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="bills">Bills</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="health">Health</option>
+                            <option value="education">Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                    <!-- Sort -->
+                        <label for="sortFilter"> Sort </label>
+                        <select id="sortFilter">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="high">Amount: High to Low</option>
+                            <option value="low">Amount: Low to High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- =========================
+                 TRANSACTION TABLE
+            ========================== -->
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+
+                                <th>Amount</th>
+
+                                <th>Category</th>
+
+                                <th>Date</th>
+
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="expensesTableBody">
+                            <!-- Transactions injected by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- =========================
+         FOOTER
+    ========================== -->
+
+        <footer>
+            <p>© 2026 Expense Tracker</p>
+
+            <p>Manage your money better.</p>
+        </footer>
+
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>
